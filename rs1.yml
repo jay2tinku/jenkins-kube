@@ -5,8 +5,11 @@ metadata:
 spec:
   replicas: 3
   selector:
-   matchExpressions:
-     - { key: env, operator: In, values: [prd] }
+    matchLabels:
+      env: production
+
+    #   matchExpressions:
+    #     - { key: env, operator: In, values: [prd] }
   template:
    metadata:
     name: myweb-pod
@@ -15,4 +18,4 @@ spec:
    spec:
      containers:
        - name: myweb-con
-         image: httpd
+         image: vimal13/apache-webserver-php
