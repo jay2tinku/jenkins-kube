@@ -13,7 +13,7 @@ spec:
    metadata:
     name: myweb-pod
     labels:
-      env: prd
+      env: production
    spec:
      containers:
        - name: myweb-con
